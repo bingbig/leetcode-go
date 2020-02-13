@@ -9,7 +9,7 @@
             "type": "go",
             "request": "launch",
             "mode": "auto",
-            "program": "/Users/liub/github/leetcode-go/regular-expression-matching/main.go",
+            "program": "/Users/liub/github/leetcode-go/valid-number/main.go",
             "env": {},
             "args": []
         }
