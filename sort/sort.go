@@ -106,9 +106,19 @@ func InsertSort(arr []int) {
 	}
 }
 
-func SelectionSort(arr []int) {
-	if len(arr) < 2 {
-		return
+func shellSort(nums []int) {
+	n := len(nums)
+	h := 1
+	for h < n/3 {
+		h = h*3 + 1
 	}
 
+	for h >= 1 {
+		for i := h; i < n; i++ {
+			for j := i; j >= h && nums[j] < nums[j-h]; j -= h {
+				nums[j], nums[j-h] = nums[j-h], nums[j]
+			}
+		}
+		h /= 3
+	}
 }

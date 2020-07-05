@@ -34,3 +34,9 @@ func TestInsertSort(t *testing.T) {
 	InsertSort(nums)
 	fmt.Println(nums)
 }
+
+func TestShellSort(t *testing.T) {
+	nums := []int{43, 65, 879, 834, 232, 0, 5446, 2, 0, 1, 2, 3, 53, 2, 1, 32, 435, 46, 56}
+	shellSort(nums)
+	fmt.Println(nums)
+}
