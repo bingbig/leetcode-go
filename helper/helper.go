@@ -23,5 +23,11 @@ func AssertionSame(t *testing.T, got, expect interface{}) {
 		if got.(bool) != expect.(bool) {
 			t.Errorf("expect %v, but got %v", expect.(bool), got.(bool))
 		}
+	case string:
+		if got.(string) != expect.(string) {
+			t.Errorf("expect %v, but got %v", expect.(string), got.(string))
+		}
+	default:
+		t.Errorf("Unexpected type\n")
 	}
 }
