@@ -5,12 +5,12 @@ func findRepeatNumber(nums []int) int {
 		return 0
 	}
 
-	m := map[int]int{}
+	m := make(map[int]struct{}, len(nums))
 	for _, n := range nums {
 		if _, ok := m[n]; ok {
 			return n
 		} else {
-			m[n] = 1
+			m[n] = struct{}{}
 		}
 	}
 	return 0
